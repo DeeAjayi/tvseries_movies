@@ -1,0 +1,18 @@
+{% load rest_framework %}
+<html>
+    <body>
+        <h1>Movies</h1>
+        <ul>
+            {% for movie in movies %}
+            <li>{{ movie }}</li>
+                <ul>
+                <li><a href={{ movie.trailer_url }}> Trailer</a></li>
+                <li> Released: {{ movie.release_year }}</li>
+                <li>IMDB Rating: {{ movie.imdb_rating }}</li>
+
+                </ul>
+
+            {% endfor %}
+        </ul>
+    </body>
+</html>

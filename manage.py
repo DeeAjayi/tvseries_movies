@@ -3,7 +3,8 @@ import os
 import sys
 
 if __name__ == '__main__':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tvseries_movies.settings.development') # change this when moving to development
+    # change this when moving to development
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tvseries_movies.settings.development')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
